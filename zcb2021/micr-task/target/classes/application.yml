@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: micr-task
+
+
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.bjpowernode.task
+  consumer:
+    check: false
+    timeout: 5000
+    retries: 0
+
+#支付微服务的地址
+micrpay:
+  alipay:
+    url: http://localhost:8006/pay/alipay/query

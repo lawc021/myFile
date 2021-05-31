@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <script type="text/javascript" th:inline="javascript">
+        //上下文访问路径
+        var contextPath = [[${#request.getContextPath()}]]
+        $(function(){
+            //登录的单击
+            $(".btn-login").on("click",function(){
+                let returnUrl = window.location.href;//当前页面的访问地址
+                window.location.href = contextPath + "/loan/page/login?returnUrl="+returnUrl;
+            })
+        })
+
+    </script>
+</body>
+</html>

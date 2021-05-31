@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="散标，理财产品，投资产品，投资理财" />
+    <meta http-equiv="description" content=""/>
+    <script type="text/javascript" language="javascript" th:src="@{/js/jquery-1.7.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/trafficStatistics.js}"></script>
+    <script type="text/javascript" language="javascript" th:src="@{/js/huaceng_new.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/share.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <style type="text/css">body{background:#f2f2f2;}</style>
+    <title>散标,互联网金融产品列表-动力金融网,专业的互联网金融信息服务平台</title>
+</head>
+
+<body>
+<div id="header">
+	<div th:include="commons/header :: html"></div>
+</div>
+
+<!--产品列表start-->
+<div id="loanList" style="margin-left: 200px;margin-top: 50px; margin-bottom:60px;color: red;font-size: 30pt">
+	<h3>请求有错误，请求重试</h3>
+</div>
+
+<div th:include="commons/footer :: html"></div>
+<!--页脚end-->
+</body>
+</html>

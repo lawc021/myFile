@@ -1,0 +1,32 @@
+
+
+spring:
+  application:
+    name: micr-pay
+  redis:
+    host: localhost
+    port: 6379
+
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.bjpowernode
+  consumer:
+    check: false
+    retries: 0
+    timeout: 5000
+
+server:
+  servlet:
+    context-path: /pay
+  port: 8006
+
+alipay:
+  config:
+    app_id: 2021000117651498
+    merchant_private_key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCC6IJcSlGnAMbPQeLhlqG+G5DblExljEvyg0ZybQATX6oUDgSg7dhFdW1q+aJhV0u1NzoKH2vTbOWC35xDnP0FRQ/kbAPXc8PQXbwwtu05fa6I28hPUlT/juvOPwvLts9vOuLsTT6310EuXAjotQc5ab/Fvd4PV14+4kGwO6bWeWj3cwGE4Sq3wRuge0n0ylGIKYuNLSHBKO1lZ3Hc7zD720Bf4Qs0e7hg7xLxcCeuYvx+IonxrnJ2SPUkT744fEDHN+T3ZqEo5HjVm3dYVq6Uy5lX0qgh+Iqw+4TnFTHZCtQiecLTiHQU56A9MszvZx0Z1enY9SDl/MDfSvUQVzbRAgMBAAECggEAUaYLiNyhyPPnDGYfyGxXPWecFhiM/dlflUbjrYLmxS6puhB0OpuehNQVBt/ks6nrAoALpzyp2BjXnaUypclI1vyYSPRGAR+nRlLwicHOfEkzjxDmAvNrKGpQETepd8nx34Ju/su/DpMniG7G773ZX6nhfshJtG/dzIL6TZ0nFiWGLgEwMmyN1wKS3674mfkFqoNGmzVCkGsoocxYIJNfu9MtGDUFRN3+SsJlJtxee9+u+rCRO2k/gDlfrpEAvG0eH5Xlc4aBGvtPabeU8+JwZBIKgmU+f5KAEFzsUP5K0yorFLcPilhDln3fWH4IxlvOKl02PxR8VYxcx9p29ZCa8QKBgQDJv2aGN9USq7T8P7azRAm0zJKhbF0BKHTHj86OJfkI6uSJeVCW407g4RcirsJcDuWa0+CptHfTla8oNdfA34YxIiatTyfvkjiDg/HE4jpAoTQ5/LVyPASuYXz7vyB7nsMRz5ICwpLhG3ZfHpjxVms6TUZF70NjLw3UzMsfNDOZWwKBgQCmHGvJ0HyyvfWqLGyOauYkNqk4WRqxtWbbk3sEJoS40XC1egDgLS5TOTG/jX9xIsumMNYOKI41AEKfUDcCv+kkyKPclih4HITDT11MewZh76sFi0OvEQ9LS5SAZrF5noeZ2Qq+1HYgK/Y9mPfkidlpdjAXLCNz81pT7xTZMQp8QwKBgQCeUvV7aT9umo+60aloP4G6gDymL6tBKGWU4tc/mK85/1SASlMjRpl1Q0/rqOfgZNRtT89kfrr2seY2kSKTOxdNYbamlZMKoF53X0mRr9P1Ok0JILeoQU+PJfR2gARW3z3IsXOtdNLdk7auaQ2vf5lAtLnsUhs5MAkTse/JuiawNwKBgAhSNigW9JgzoeHTdeCwhDTeNB3pgMfUMYHgYnIzx8RGYaIFqZORT9fFbrOM0AyH1LHPknmFGJKZH71BVHAj0vcPwf2j3AUgUJpEGIVjSE+RpPyTHGHhteVstNS10EAqa9qOH9atZ/l2mlA9oHVnXmfFDuWqRWBimWzI9j9nEIJnAoGAXZtSrqYd0Wc3dXZ8ZiCkReOFnEtsjI7w+iy12lOt6RZxqYatPocNXiVSfgWBhzS8IGfnk+oFSw9Dnq0MpNVqGn7wL+j0jrB73kbUweWwrYym00lLSAVxW5d1KNkbU3FIVQCsThxzwwU7OSas4VQQj2ET3Es3bpl1GxdRk0aOkJQ=
+    alipay_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs0a8ON8U0qawU1ajVIdvDAclR6QHC96lAzhz09dhJYEwRerJqyp+lyZYO2bBH2CgT6eGdxPkrz8xRa8X0iD0mKjpmgzBRpZXyBITJHSZKua7jdGnZ92/N7KjGepO9fbOhaE72VkOjH2Od+98BCRjLI9jIsbeEEVirLDG3SeTr0MpTKuCDCzMxOrk090S/5ekIYfqAfa8yqsPSOYHSJk911m8OCEdxbI1PisGb7UQAWEyCWQ3P0JiZLxGKAYysbnT9fGkUcVZ+J/keCnCtUiv9sDChapLrBSQ+LQmup+w6JygQoPIVyUqcwGyhxPS2R7B0+gJoL+C9xrUgwg0sjvudwIDAQAB
+    notify_url: http://47.113.198.114:9999/pay/alipay/notify
+    return_url: http://localhost:8001/licai/loan/myCenter
+    gatewayUrl: https://openapi.alipaydev.com/gateway.do

@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "jdwx.realname",
+      "type": "com.bjpowernode.web.config.RealnameConfig",
+      "sourceType": "com.bjpowernode.web.config.RealnameConfig"
+    },
+    {
+      "name": "jdwx.sms",
+      "type": "com.bjpowernode.web.config.SmsConfig",
+      "sourceType": "com.bjpowernode.web.config.SmsConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jdwx.realname.appkey",
+      "type": "java.lang.String",
+      "sourceType": "com.bjpowernode.web.config.RealnameConfig"
+    },
+    {
+      "name": "jdwx.realname.url",
+      "type": "java.lang.String",
+      "sourceType": "com.bjpowernode.web.config.RealnameConfig"
+    },
+    {
+      "name": "jdwx.sms.appkey",
+      "type": "java.lang.String",
+      "sourceType": "com.bjpowernode.web.config.SmsConfig"
+    },
+    {
+      "name": "jdwx.sms.content",
+      "type": "java.lang.String",
+      "sourceType": "com.bjpowernode.web.config.SmsConfig"
+    },
+    {
+      "name": "jdwx.sms.url",
+      "type": "java.lang.String",
+      "sourceType": "com.bjpowernode.web.config.SmsConfig"
+    }
+  ],
+  "hints": []
+}
